@@ -8,6 +8,7 @@ export default function Header(props: Props) {
     <>
         <h1>{props.title}</h1>
         <h2>{props.pagetitle}</h2>
+        <title>{props.pagetitle}</title>
     </>
   )
 }

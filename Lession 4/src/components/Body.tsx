@@ -5,7 +5,7 @@ type Props = {
 export default function Body(props: Props) {
   return (
     <>
-        <p>{props.body}</p>
+        <div>{props.body}</div>
     </>
   )
 }
