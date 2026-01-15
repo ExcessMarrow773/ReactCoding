@@ -28,9 +28,19 @@ function AddCards({onAddCard}: Props) {
     }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}
+        style={{
+            maxWidth: "400px",
+            margin: "0 auto",
+            padding: "20px",
+            border: "1px solid #ddd",
+            borderRadius: "8px",
+            display: "flex",
+            flexDirection: "column" as const,
+            gap: "12px",
+        }}
+    >
         <h2>Add a new image</h2>
-        Title
         <label>
             Title
             <input type="text" value={title} onChange={(e)=> setTitle(e.target.value)}/>
