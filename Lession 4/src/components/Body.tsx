@@ -1,11 +1,15 @@
+import type { ReactNode } from "react"
+
 type Props = {
-    body: string
+    children:ReactNode
 }
 
-export default function Body(props: Props) {
+function Body({children}: Props) {
   return (
     <>
-        <div>{props.body}</div>
+        {children}
     </>
   )
 }
+
+export default Body

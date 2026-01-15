@@ -5,14 +5,14 @@ type Props = {
     date: string
 }
 
-function Card(props: Props) {
+function Card({image, title, description, date}: Props) {
     return (
         <div style={styles.card}>
-            <img src={props.image} alt={props.title} style={styles.image}/>
+            <img src={image} alt={title} style={styles.image}/>
             <div style={styles.content}>
-                <h3>{props.title}</h3>
-                <p>{props.description}</p>
-                <span>{props.date}</span>
+                <h3 style={styles.title}>{title}</h3>
+                <p style={styles.description}>{description}</p>
+                <span style={styles.date}>{date}</span>
             </div>
         </div>
     )    
@@ -20,13 +20,35 @@ function Card(props: Props) {
 
 const styles={
     card: {
-        width: "300px",
+        width: "275px",
         borderRadius: "12px",
         overflow: "hidden",
-        backgroundcolor: "#fff",
+        backgroundColor: "#fff",
+        display: "flex",
+        flexDirection: "column" as const
     },
-    image: {},
-    content: {}
+    image: {
+        width: "100%",
+        hight: "180px",
+        objectFit:"cover" as const,
+    },
+    content: {
+        padding: "16px",
+    },
+    title: {
+        color:"#000",
+        fontSize: "1.1rem"
+    },
+    description: {
+        color:"#555",
+        fontSize:"0.95rem"
+    },
+    date: {
+        color:"#888",
+        fontSize:"0.8rem",
+        textAlign: "right" as const,
+        display: "block",
+    }
 }
 
 export default Card;
