@@ -5,6 +5,7 @@ import Body from "../components/Body";
 import CardList from "../components/CardList";
 import Footer from "../components/Footer";
 import { Link } from "react-router";
+import Nav from "../components/Nav";
 
 type Props = {};
 
@@ -15,9 +16,8 @@ function Home({}: Props) {
     }
     return (
       <>
+      <Nav/>
         <Header title="My Gallery Website" pagetitle='Home' />
-
-        <Link to="/about">About Me</Link>
 
         <AddCards onAddCard={addCard}/>
         <Body>
