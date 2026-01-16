@@ -9,4 +9,4 @@ function AboutMe({}: Props) {
     )
 }
 
-export default AboutMe;
+export default AboutMe
