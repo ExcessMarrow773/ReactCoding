@@ -2,8 +2,9 @@ import { useState } from "react";
 import Header from "../components/Header";
 import AddCards from "../components/AddCards";
 import Body from "../components/Body";
-import CardList from "../components/cardList";
+import CardList from "../components/CardList";
 import Footer from "../components/Footer";
+import { Link } from "react-router";
 
 type Props = {};
 
@@ -15,6 +16,9 @@ function Home({}: Props) {
     return (
       <>
         <Header title="My Gallery Website" pagetitle='Home' />
+
+        <Link to="/about">About Me</Link>
+
         <AddCards onAddCard={addCard}/>
         <Body>
           <div style={{
