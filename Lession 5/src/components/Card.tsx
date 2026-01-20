@@ -15,7 +15,7 @@ function Card({image, title, description, date}: Props) {
                 <span style={styles.date}>{date}</span>
             </div>
         </div>
-    )    
+    )
 }
 
 const styles={

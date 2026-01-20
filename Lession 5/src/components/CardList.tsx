@@ -29,7 +29,7 @@ function CardList({cards}: Props) {
                 date={card.date}
             />
         ))}
-
+    
     </div>
   )
 }
